@@ -52,6 +52,10 @@ function App() {
       {
           path: "*",
           element: <ErrorPage />
+      },
+      {
+        path: "/",
+        element: <AdminLogin />
       }
     ]);
 

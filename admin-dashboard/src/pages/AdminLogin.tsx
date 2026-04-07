@@ -41,33 +41,22 @@ const AdminLogin: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white shadow-xl rounded-xl overflow-hidden">
-        {/* Left Form Section */}
-        <div className="w-full md:w-1/2 px-10 py-12 bg-white">
-          <h1 className="text-4xl font-bold text-blue-800 mb-6">
-            Admin Panel
-          </h1>
-        </div>
-      </div>
 
     <div className="flex items-center justify-center min-h-screen bg-gray-50 p-4 md:p-0">
       <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white shadow-xl rounded-2xl overflow-hidden border border-gray-100">
         <div className="w-full md:w-1/2 px-6 md:px-12 py-10 md:py-16 space-y-8">
-          <h1 className="text-3xl font-bold mb-6 text-blue-700">
-            Login to <br />
-            The Admin Panel
-            <br />
+          <h1 className="text-4xl font-bold text-blue-800 mb-6">
+            Admin Panel
           </h1>
           <p className="text-gray-600 mb-8">
             Sign in to manage environmental hazard reports securely.
           </p>
-          <form className="space-y-6">
+
+          <form onSubmit={saveLogin} className="space-y-6">
             <div>
               <label
                 htmlFor="userName"
-                className="block text-sm font-medium text-gray-700"
-              >
+                className="block text-sm font-medium text-gray-700">
                 Username
               </label>
               <input
@@ -128,7 +117,6 @@ const AdminLogin: React.FC = () => {
           />
         </div>
       </div>
-    </div>
     </div>
   );
 };
